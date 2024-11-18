@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/7a820b96d4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div id="header">
+    <div class="container">
+      <nav>
+        <!-- <img src="" class="logo"> -->
+        <p><span>S</span>anaa</p>
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">My Projects</a></li>
+          <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p></p>
+        <h1>Hi, I'm <span>Sanaa</span> <br> From India</h1>
+      </div>
+    </div>
+  </div>
+ <!-------about-------->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+
+        <div class="about-col-1">
+          <img src="images/Sanaa.jpg">
+        </div>
+
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Hello! My name is Sanaa, and I am currently pursuing a Bachelor of Engineering in Computer Science at the Thapar Institute of Engineering and Technology, Patiala, graduating in July 2025. I have technical skills in web development, particularly with HTML, CSS, JavaScript, and React. I completed a summer internship at Xebia, where I developed frontend features for a banking application. I’ve worked on projects such as a Lost & Found website for reporting and searching items with various user interface pages and a portfolio website. In my free time, I enjoy spending time with family and friends, watching movies, doodling, drawing, and dancing.</p>
+
+          <div class="tab-titles">
+            <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+            <div class="tab-links" onclick="opentab('experience')">Experience</div>
+            <div class="tab-links" onclick="opentab('education')">Education</div>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">  <!-- for skills -->
+            <ul>
+              <li><span>Languages</span><br> C, C++, JavaScript, HTML, CSS, Python </li>
+              <li><span>Frameworks</span><br>React.js, Node.js</li>
+              <li><span>Databases</span><br>MySQL, MongoDB, PL/SQL</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">  <!-- for experience -->
+            <ul>
+              <li><span>Xebia - Summer Intern</span><br>• Developed a responsive banking website with pages like Home, Personal Details, and User Profile, ensuring 
+                smooth navigation and secure form validation.<br> 
+                • Implemented Tailwind CSS for streamlined, responsive styling, ensuring a clean and modern user interface.<br>
+                • Utilized React.js to create dynamic, reusable components and enable seamless frontend-backend interaction.</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">  <!-- for education all in col-2 -->
+            <ul>
+              <li><span>4-year Bachelor of Engineering in Computer Science </span><br>Thapar Institute of Engineering and Technology, Patiala</li>
+              <li><span>Class XII </span><br>St. Anne’s Convent School, Chandigarh, India - CBSE</li>
+              <li><span>Class X </span><br>St. Anne’s Convent School, Chandigarh, India - CBSE</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+   <!-------services-------->
+  <div id="services">
+    <h1 class="sub-title">My Projects</h1>
+    <div class="services-list">
+     <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Lost and Found Website</h2>
+        <!-- <img src="images\Background.png"> -->
+        <p>Designed and developed a Lost & Found website where users can report lost items post found items, and 
+          search for items that have been reported lost or found by others, facilitating the return of lost possessions to 
+          their rightful owners. </p>
+        <a href="https://github.com/Sanaa02Arora">Learn More</a>
+     </div>
+     <div>
+      <i class="fa-solid fa-building-columns"></i>
+      <h2>Banking Website</h2>
+      <p>Developed the frontend features for a banking website.(Internship)</p>
+      <a href="https://github.com/Sanaa02Arora">Learn More</a>
+     </div>
+     <div>
+      <i class="fa-solid fa-disease"></i>
+      <h2>Skin Cancer Detection</h2>
+      <p>Developed a skin cancer detection model using machine learning techniques to classify different types of skin 
+        lesions, achieving high accuracy in prediction and validation. </p>
+      <a href="https://github.com/Sanaa02Arora/Skin-Cancer-Detection">Learn More</a>
+    </div>
+
+    </div>
+  </div>
+<!-------portfolio-------->
+<!-- <div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class=""work-list>
+      <div class="work">
+        <img src="">
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-------contact-------->
+<div id="contact">
+  <h1 class="sub-title">Contact me</h1>
+  <div class="container">
+      <div class="contact-left">
+        <p><i class="fa-solid fa-envelope"></i>sanaa18arora@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>+91 8699064838</p>
+        <div class="social-icons">
+        <a href="http://www.linkedin.com/in/sanaa-arora"><i class="fa-brands fa-linkedin"></i></a>
+        <!-- <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        <a href=""><i class="fa-brands fa-telegram"></i></a> -->
+     </div>
+     <a href="Sanaa.pdf" download class="btn btn2">Download CV</a>
+  </div>
+</div>
+</div>
+
+  <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+</body>
+</html>
